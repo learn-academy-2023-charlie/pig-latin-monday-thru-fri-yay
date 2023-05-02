@@ -89,11 +89,13 @@ const App = () => {
     <div className="page-container">
       <div className="body-container">
         <h1 className="title">Pig Latin Translator</h1>
+        <div className="walking-pig-container">
         <img
           src={butcherPigImage}
           alt="pig with butcher cut names in pig latin"
           className="butcher-pig-image"
         />
+        </div>
 
         <div className="input-section">
           <h4 className= "phrase">Enter phrase to be translated:</h4>
