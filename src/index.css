@@ -122,8 +122,10 @@ code {
 .walking-pig-container {
   position: absolute;
   bottom: 1;
+  width: 18%;
   left: calc(50% - 50px);
   transform: translateX(calc(-50% + 50px));
+  overflow: visible;
   animation: walk 6s linear infinite;
   mix-blend-mode: multiply;
   filter: contrast(1);
