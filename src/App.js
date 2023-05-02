@@ -68,6 +68,10 @@ const App = () => {
     setInputTranslated(translatedWords)
   }
 
+  const audioElement = new Audio(translatedSound);
+  audioElement.play();
+}
+
   // ACTION ITEM: this method restarts the game by setting the original state, when you are ready for your full user experience delete the test words in setUserInput and pass an empty string
   const restartGame = () => {
     setUserInput("apple through queen squeal fry fluent")
@@ -85,35 +89,44 @@ const App = () => {
     setUserInput(e.target.value)
   }
 
-  return (
-    <div className="page-container">
-      <div className="body-container">
-        <h1 className="title">Pig Latin Translator</h1>
-        <div className="walking-pig-container">
-        <img
-          src={butcherPigImage}
-          alt="pig with butcher cut names in pig latin"
-          className="butcher-pig-image"
-        />
+  function playAudio() {
+    const audioElement = new Audio(translatedSound);
+    audioElement.play();
+  }
+  return(
+    <>
+      <div className="page-container">
+        <div className="body-container">
+          <h1 className="title">Pig Latin Translator</h1>
+          <div className="walking-pig-container">
+            <img
+              src={butcherPigImage}
+              alt="pig with butcher cut names in pig latin"
+              className="butcher-pig-image"
+            />
+          </div>
+          <div>
+            <button onClick={playAudio}>Play Audio</button>
+          </div>
+          <div className="input-section">
+            <h4 className= "phrase">Enter phrase to be translated:</h4>
+            <input
+              type="text"
+              className="user-input"
+              onChange={handleInput}
+              value={userInput}
+            />
+            <br />
+            <button onClick={setUpPreventDefault}>Submit</button>
+            <button onClick={restartGame}>Clear</button>
+          </div>
+          <p className="output">{inputTranslated}</p>
         </div>
-
-        <div className="input-section">
-          <h4 className= "phrase">Enter phrase to be translated:</h4>
-          <input
-            type="text"
-            className="user-input"
-            onChange={handleInput}
-            value={userInput}
-          />
-          <br />
-          <button onClick={setUpPreventDefault}>Submit</button>
-          <button onClick={restartGame}>Clear</button>
-        </div>
-        <p className="output">{inputTranslated}</p>
+        <footer className="footer">&copy; 2022 | Coded by: Kyle & Scott</footer>
       </div>
-      <footer className="footer">&copy; 2022 | Coded by: Kyle & Scott</footer>
-    </div>
-  )
-}
+    </>
+  );
+
+    
 
 export default App
