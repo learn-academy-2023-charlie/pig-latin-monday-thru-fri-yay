@@ -86,32 +86,41 @@ const App = () => {
   }
 
   return (
-    <div className="page-container">
-      <div className="body-container">
-        <h1>Pig Latin Translator</h1>
-        <img
-          src={butcherPigImage}
-          alt="pig with butcher cut names in pig latin"
-          className="butcher-pig-image"
-        />
-
-        <div className="input-section">
-          <h4>Enter phrase to be translated:</h4>
-          <input
-            type="text"
-            className="user-input"
-            onChange={handleInput}
-            value={userInput}
-          />
-          <br />
-          <button onClick={setUpPreventDefault}>Submit</button>
-          <button onClick={restartGame}>Clear</button>
+    <>
+      <head>
+        <title>Pig Latin Translator</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+      <body>
+        <div className="page-container">
+          <div className="body-container">
+            <h1>Pig Latin Translator</h1>
+            <img
+              src={butcherPigImage}
+              alt="pig with butcher cut names in pig latin"
+              className="butcher-pig-image"
+            />
+            <div className="input-section">
+              <h4>Enter phrase to be translated:</h4>
+              <input
+                type="text"
+                className="user-input"
+                onChange={handleInput}
+                value={userInput}
+              />
+              <br />
+              <button onClick={setUpPreventDefault}>Submit</button>
+              <button onClick={restartGame}>Clear</button>
+            </div>
+            <p>{inputTranslated}</p>
+          </div>
+          <footer>&copy; 2022 | Coded by: Your Names Here!</footer>
         </div>
-        <p>{inputTranslated}</p>
-      </div>
-      <footer>&copy; 2022 | Coded by: Your Names Here!</footer>
-    </div>
-  )
+      </body>
+    </>
+  );
 }
 
 export default App
