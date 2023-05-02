@@ -124,14 +124,14 @@ code {
   bottom: 1;
   left: calc(50% - 50px);
   transform: translateX(calc(-50% + 50px));
-  animation: walk 5s linear infinite;
+  animation: walk 6s linear infinite;
   mix-blend-mode: multiply;
   filter: contrast(1);
 }
 
 @keyframes walk {
   0% {
-    left: calc(100vw - 100px);
+    left: calc(100vw + 100px);
   }
   100% {
     left: 0;
@@ -144,7 +144,7 @@ code {
   left: 0;
   background-color: white;
   mix-blend-mode: screen;
-  animation: wiggle 0.5s ease-in-out infinite;
+  animation: wiggle 5s ease-in-out infinite;
 }
 
 @keyframes wiggle {
