@@ -5,7 +5,7 @@ import butcherPigImage from './assets/butcherPig.jpeg'
 const App = () => {
 
   // ACTION ITEM: to make the development process easier there are some preassigned words in the input field, when you are ready for your full user experience delete the test words passed to useState and pass an empty string
-  const [userInput, setUserInput] = useState("apple through queen squeal fry fluent")
+  const [userInput, setUserInput] = useState(" ")
   const [inputTranslated, setInputTranslated] = useState("")
 
   // ACTION ITEM: the "myPigLatinCodeHere" function is where you will put your logic to translate the sentence entered by the user into Pig Latin
@@ -88,7 +88,7 @@ const App = () => {
   return (
     <div className="page-container">
       <div className="body-container">
-        <h1>Pig Latin Translator</h1>
+        <h1 className="title">Pig Latin Translator</h1>
         <img
           src={butcherPigImage}
           alt="pig with butcher cut names in pig latin"
@@ -96,7 +96,7 @@ const App = () => {
         />
 
         <div className="input-section">
-          <h4>Enter phrase to be translated:</h4>
+          <h4 className= "phrase">Enter phrase to be translated:</h4>
           <input
             type="text"
             className="user-input"
@@ -107,9 +107,9 @@ const App = () => {
           <button onClick={setUpPreventDefault}>Submit</button>
           <button onClick={restartGame}>Clear</button>
         </div>
-        <p>{inputTranslated}</p>
+        <p className="output">{inputTranslated}</p>
       </div>
-      <footer>&copy; 2022 | Coded by: Your Names Here!</footer>
+      <footer className="footer">&copy; 2022 | Coded by: Kyle & Scott</footer>
     </div>
   )
 }
