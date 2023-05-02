@@ -85,7 +85,7 @@ const App = () => {
     setUserInput(e.target.value)
   }
 
-  return (
+  return (<>
     <div className="page-container">
       <div className="body-container">
         <h1 className="title">Pig Latin Translator</h1>
@@ -111,7 +111,7 @@ const App = () => {
       </div>
       <footer className="footer">&copy; 2022 | Coded by: Kyle & Scott</footer>
     </div>
+    </>
   )
 }
-
 export default App

@@ -119,6 +119,56 @@ code {
 
 
 .phrase {
+  .walking-pig-container {
+    position: fixed;
+    bottom: 1;
+    left: calc(50% - 50px);
+    transform: translateX(calc(-50% + 50px));
+    animation: walk 5s linear infinite;
+    mix-blend-mode: multiply;
+    filter: contrast(1);
+  }
+  
+  @keyframes walk {
+    0% {
+      left: calc(100vw - 100px);
+    }
+    100% {
+      left: 0;
+    }
+  }
+  
+  .butcher-pig-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    mix-blend-mode: screen;
+    animation: wiggle 0.5s ease-in-out infinite;
+  }
+  
+  @keyframes wiggle {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    75% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  
+  
+  
+  
   font-size: large;
   font-style: Jazz LET, fantasy;
   font-weight: bold;
@@ -126,3 +176,27 @@ code {
   -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
 }
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.butcher-pig-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: walk 5s linear infinite;
+  transform: scaleX(-5);
+}
+
+@keyframes walk {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100% + 200px));
+  }
+}
+
