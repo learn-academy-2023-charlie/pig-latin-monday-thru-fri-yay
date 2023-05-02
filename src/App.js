@@ -33,7 +33,28 @@ const App = () => {
 
       // ACTION ITEM: your Pig Latin logic goes here!
 
-    
+      if (vowelsArray.length === 0) {
+        // If the word has no vowels, just add "ay" to the end of the word
+        eachWord += "ay";
+      } else if (vowelsArray[0] === "y" && vowelsArray.length === 1) {
+        // Treat "y" as a vowel if it is the only vowel in the word
+        const index = eachWord.indexOf(vowelsArray[0]);
+        const prefix = eachWord.slice(0, index);
+        const suffix = eachWord.slice(index);
+        eachWord = suffix + prefix + "ay";
+      } else if (vowelsArray.includes("u") && eachWord[eachWord.indexOf("u") - 1] === "q") {
+        // If the word begins with "qu", move the "u" along with the "q"
+        const index = eachWord.indexOf(vowelsArray[0]);
+        const prefix = eachWord.slice(0, index + 1);
+        const suffix = eachWord.slice(index + 1);
+        eachWord = suffix + prefix + "ay";
+      } else {
+        // Move the first consonants to the end of the word and add "ay"
+        const index = eachWord.indexOf(vowelsArray[0]);
+        const prefix = eachWord.slice(0, index);
+        const suffix = eachWord.slice(index);
+        eachWord = suffix + prefix + "ay";
+      }
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
