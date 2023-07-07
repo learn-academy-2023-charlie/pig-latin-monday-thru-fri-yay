@@ -13,7 +13,7 @@ code {
 }
 
 .title {
-  font-style: Jazz LET, fantasy;
+  font-family: 'Jazz LET', fantasy;
   font-weight: bold;
   color: rgb(212, 6, 249);
   font-size: 80px;
@@ -21,12 +21,11 @@ code {
   margin-top: 20px;
   margin-bottom: 20px;
   -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
-    text-shadow: 1px 5px 10px 15px rgb(0, 0, 0);
-}
-.title{
+  -webkit-text-stroke-color: black;
+  text-shadow: 1px 5px 10px 15px rgb(0, 0, 0);
   animation: dance 2s infinite;
 }
+
 @keyframes dance {
   0% { transform: translateY(0); }
   25% { transform: translateY(-20px); }
@@ -35,80 +34,69 @@ code {
   100% { transform: translateY(0); }
 }
 
-
-
-.body-container{
+.body-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background-color: linear-gradient(#00e5ff,#b400fb);
+  background-color: linear-gradient(#00e5ff, #b400fb);
   animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+  0%, 100% {
+    filter: hue-rotate(0deg);
   }
-
-  .body-container{
-    background-color: #ba8585;
+  50% {
+    filter: hue-rotate(360deg);
   }
+}
 
-  .input-section {
-    border: 2px solid rgb(100, 99, 99);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background: linear-gradient(#00e5ff,#b400fb);
-    animation: animate 8s linear infinite;
-    box-shadow: 1px 5px 10px 15px rgba(0, 0, 0, 0.5);
+.input-section {
+  border: 2px solid rgb(100, 99, 99);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(#00e5ff, #b400fb);
+  animation: animate 8s linear infinite;
+  box-shadow: 1px 5px 10px 15px rgba(0, 0, 0, 0.5);
+}
 
-  }
+.user-input {
+  border: 0;
+  padding: 1;
+  outline: 5px solid #e9e9e9;
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 5px 10px 15px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  color: rgb(231, 7, 247);
+}
 
-  @keyframes animate {
-    0%, 100% {
-      filter: hue-rotate(0deg);
-    }
-    50% {
-      filter: hue-rotate(360deg);
-    }
-  }
-
-  .user-input {
-    border: 0;
-    padding: 1;
-    outline: 5px solid #e9e9e9;
-    border-radius: 5px;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 1px 5px 10px 15px rgba(0, 0, 0, 0.5);
-
-  }
-
-  .user-input {
-    text-decoration: none;
-    color: rgb(231, 7, 247)
-  }
-  
-.output{
+.output {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color:rgb(212, 6, 249);
+  color: rgb(212, 6, 249);
   font-size: 30px;
   -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: black;
 }
 
-.footer{
+.footer {
   font-size: 20px;
   font-weight: bold;
   display: flex;
-  align: center;
+  align-items: center;
   color: whitesmoke;
   height: 100px;
   -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: black;
 }
 
 .phrase {
@@ -121,7 +109,7 @@ code {
     mix-blend-mode: multiply;
     filter: contrast(1);
   }
-  
+
   @keyframes walk {
     0% {
       left: calc(100vw - 100px);
@@ -130,7 +118,7 @@ code {
       left: 0;
     }
   }
-  
+
   .butcher-pig-image {
     position: absolute;
     top: 0;
@@ -139,7 +127,7 @@ code {
     mix-blend-mode: screen;
     animation: wiggle 0.5s ease-in-out infinite;
   }
-  
+
   @keyframes wiggle {
     0% {
       transform: translateX(0);
@@ -157,64 +145,25 @@ code {
       transform: translateX(0);
     }
   }
-  
-  
-  
-  
-  
+
   font-size: large;
-  font-style: Jazz LET, fantasy;
+  font-family: 'Jazz LET', fantasy;
   font-weight: bold;
   color: rgb(251, 251, 251);
   -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: black;
 }
-<<<<<<< HEAD
 
 .image-container {
   position: relative;
   width: 100%;
   height: 100%;
-=======
-.walking-pig-container {
-  position: absolute;
-  bottom: 1;
-  left: calc(50% - 50px);
-  transform: translateX(calc(-50% + 50px));
-  animation: walk 5s linear infinite;
-  mix-blend-mode: multiply;
-  filter: contrast(1);
-}
-
-@keyframes walk {
-  0% {
-    left: calc(100vw - 100px);
-  }
-  100% {
-    left: 0;
-  }
->>>>>>> 082db5381d6f0fe68bb17d4acedc54a95e461820
 }
 
 .butcher-pig-image {
   position: absolute;
   top: 0;
   left: 0;
-<<<<<<< HEAD
-  animation: walk 5s linear infinite;
-  transform: scaleX(-5);
-}
-
-@keyframes walk {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(100% + 200px));
-  }
-}
-
-=======
   background-color: white;
   mix-blend-mode: screen;
   animation: wiggle 0.5s ease-in-out infinite;
@@ -237,4 +186,3 @@ code {
     transform: translateX(0);
   }
 }
->>>>>>> 082db5381d6f0fe68bb17d4acedc54a95e461820

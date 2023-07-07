@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
-import butcherPigImage from './assets/butcherPig.jpeg'
+
 
 const App = () => {
 
@@ -90,11 +90,7 @@ const App = () => {
       <div className="body-container">
         <h1 className="title">Pig Latin Translator</h1>
         <div className="walking-pig-container">
-        <img
-          src={butcherPigImage}
-          alt="pig with butcher cut names in pig latin"
-          className="butcher-pig-image"
-        />
+       
         </div>
 
         <div className="input-section">
